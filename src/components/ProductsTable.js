@@ -10,6 +10,7 @@ import {
     withStyles
 } from '@material-ui/core';
 import ProductsItem from './ProductsItem';
+import ProductsService from '../services/ProductsAPI';
 
 const StyledTableCell = withStyles((theme) => ({
     head: {
@@ -21,18 +22,13 @@ const StyledTableCell = withStyles((theme) => ({
 }))(TableCell);
 
 
-
-const useCustomStyles = makeStyles({
-    table: {
-        // minWidth: 650,
-    },
-});
-
 export default function ProductsTable() {
-    const styles = useCustomStyles();
+
+    // const [data] = ProductsService();
+
     return (
         <TableContainer >
-            <Table className={styles.table} aria-label="simple table">
+            <Table aria-label="simple table">
                 <TableHead>
                     <TableRow>
                         <StyledTableCell width='30px'>S/N</StyledTableCell>
